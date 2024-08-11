@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button"
 
 import "./home.css"
+import { imagesUrl, ourSolutionsContent } from "@/constants/home"
+import Card from "@/components/card/card"
 
 export default function Home() {
     return (
@@ -16,7 +18,27 @@ export default function Home() {
 
             </div>
 
-            <div className="h-dvh">
+            <div className="py-10" >
+                <h4 className="text-2xl text-center font-semibold mb-5">Reconhecida pelas principais instituições de pesquisa</h4>
+
+                <div className="flex  px-60 justify-between">
+                    {imagesUrl.map((url) => (
+                        <img className="h-[40px] w-auto" src={url} key={url} />
+
+                    ))}
+
+                </div>
+
+            </div>
+
+            <div className="w-full h-dvh py-20 px-60">
+                <h2 className="text-5xl text-center font-semibold text-[#009953] mb-10">Nossas Soluções</h2>
+
+                <div className="flex justify-between flex-wrap gap-20">
+                    {ourSolutionsContent.map(({ name, number, text }) => (
+                        <Card name={name} text={text} number={number} key={number} />
+                    ))}
+                </div>
 
             </div>
         </main>

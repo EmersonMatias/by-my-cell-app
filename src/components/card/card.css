@@ -1,0 +1,14 @@
+.card {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e6e6e6;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.content {
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover {
+    box-shadow: 0 0 20px #0099549b;
+    border-color: #0099542f;
+}

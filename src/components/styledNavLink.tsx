@@ -6,7 +6,7 @@ export default function StyledNavLink({ to, name }: StyledNavLink) {
         <NavLink to={to}>
             {
                 ({ isActive }) => (
-                    <Button className={isActive ? "bg-red-600" : ""}>{name}</Button>
+                    <Button variant={isActive ? "green" : "default"}>{name}</Button>
                 )
             }
         </NavLink>

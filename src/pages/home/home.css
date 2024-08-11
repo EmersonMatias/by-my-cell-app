@@ -1,20 +1,38 @@
-.hero_section{
+.hero_section {
     background-image: url("../../assets//dna.png");
     background-position-y: -250px;
     background-position-x: 450px;
     background-size: 100%;
     background-repeat: no-repeat;
-    animation: movimentoVertical  4s infinite ease-in-out;
+    animation: movimentoVertical 4s infinite ease-in-out;
 }
 
 @keyframes movimentoVertical {
     0% {
         background-position: 450px -250px;
     }
+
     50% {
-        background-position: 450px -150px; /* Pequeno movimento para baixo */
+        background-position: 450px -150px;
     }
+
     100% {
-        background-position: 450px -250px; /* Volta à posição original */
+        background-position: 450px -250px;
     }
 }
+
+.container {
+    width: 100%;
+    height: 100%;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+  }
+
+
+  
+
+  
+   
