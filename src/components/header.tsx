@@ -4,9 +4,9 @@ import StyledNavLink from "./styledNavLink";
 export default function Header() {
     return (
         <>
-            <header className="bg-pink-100 flex justify-between items-center px-60 py-4">
+            <header className="flex justify-between items-center px-60 py-4 fixed w-full z-50 bg-white">
                 <div>
-                    <img className="h-14 w-fit" src="https://i0.wp.com/bymycell.com.br/wp-content/uploads/2024/03/ByMyCell_dark2.png?fit=1002%2C297&ssl=1" />
+                    <img className="h-14 w-fit" src="https://i0.wp.com/bymycell.com.br/wp-content/uploads/2024/03/ByMyCell_dark2.png?fit=1002%2C297&ssl=1" alt="Logo ByMyCell" />
                 </div>
 
                 <div className="flex gap-4">

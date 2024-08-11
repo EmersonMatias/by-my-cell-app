@@ -1,0 +1,20 @@
+.hero_section{
+    background-image: url("../../assets//dna.png");
+    background-position-y: -250px;
+    background-position-x: 450px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: movimentoVertical  4s infinite ease-in-out;
+}
+
+@keyframes movimentoVertical {
+    0% {
+        background-position: 450px -250px;
+    }
+    50% {
+        background-position: 450px -150px; /* Pequeno movimento para baixo */
+    }
+    100% {
+        background-position: 450px -250px; /* Volta à posição original */
+    }
+}
