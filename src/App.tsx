@@ -1,12 +1,10 @@
-import { Button } from "./components/ui/button"
+import { RouterProvider } from "react-router-dom"
+import router from "./router"
 
 function App() {
 
-
   return (
-    <main className="bg-black w-full h-dvh">
-      
-    </main>
+   <RouterProvider router={router}/>
   )
 }
 
