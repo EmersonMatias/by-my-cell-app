@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Button } from "./ui/button";
 
-export default function StyledNavLink({ to, name }: StyledNavLink) {
+export default function StyledNavLink({ to, name }: StyledNavLinkProps) {
     return (
         <NavLink to={to}>
             {
@@ -13,7 +13,7 @@ export default function StyledNavLink({ to, name }: StyledNavLink) {
     )
 }
 
-type StyledNavLink = {
+type StyledNavLinkProps = {
     to: string
     name: string
 }
