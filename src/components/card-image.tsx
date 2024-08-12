@@ -19,7 +19,7 @@ export default function CardImage({
             }
 
             <div className="max-w-[600px] flex flex-col gap-8">
-                <h4 className="text-5xl text-primaryColor font-semibold leading-snug">{title}</h4>
+                <h2 className="text-5xl text-primaryColor font-semibold leading-snug">{title}</h2>
                 <p className="text-lg">{text}</p>
                 <Button>{buttonText}</Button>
             </div>
