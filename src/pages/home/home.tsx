@@ -1,16 +1,18 @@
 import { Button } from "@/components/ui/button"
 import "./home.css"
-import { cardImageContent, imagesUrl, ourSolutionsContent, reviewsCardContent } from "@/constants/home"
+import { cardImageContent, faqContent, imagesUrl, ourSolutionsContent, reviewsCardContent } from "@/constants/home"
 import CardOurSolutions from "@/components/card-our-solutions/card-our-solutions"
 import CardImage from "@/components/card-image"
 import ReviewCard from "@/components/review-card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import faqImage from "../../assets/faqImage.svg"
+import FaqCard from "@/components/faq-card"
 
 export default function Home() {
     return (
-        <main className="w-full" >
+        <main className="w-full flex flex-col items-center"  >
 
-            <section className="flex items-center h-dvh hero_section shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
+            <section className="w-full flex items-center h-dvh hero_section shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
                 <div className="ml-60 z-10">
                     <h3 className="text-4xl font-medium">Bem vindo à</h3>
                     <h1 className="text-9xl text-primaryColor font-bold mb-6">ByMyCell</h1>
@@ -28,7 +30,6 @@ export default function Home() {
                     ))}
                 </div>
             </section>
-
 
             <section className="w-full py-10 shadow-[0_0px_30px_rgba(0,0,0,1)]" >
                 <h4 className="text-2xl text-center font-semibold mb-10">Reconhecida pelas principais instituições de pesquisa</h4>
@@ -54,7 +55,7 @@ export default function Home() {
                 ))}
             </section>
 
-            <section className="w-full py-10 shadow-[0_0px_30px_rgba(0,0,0,1)] flex px-60 gap-10 justify-between">
+            <section className="w-full py-10 shadow-[0_0px_30px_rgba(0,0,0,1)] flex px-60 gap-10 justify-between z-10">
 
                 <div className="text-center">
                     <h2 className="text-5xl text-primaryColor font-semibold">+300</h2>
@@ -77,16 +78,16 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="w-full  py-20 flex  items-center flex-col ">
-                <h2 className="mb-10 text-primaryColor text-4xl font-bold">Veja o que nosso clientes dizem sobre nosso trabalho</h2>
+            <section className="w-[90%] mt-20 rounded-2xl  py-20 flex  items-center flex-col reviews shadow-[0_0px_30px_rgba(0,0,0,1)]">
+                <h2 className="mb-10 text-white text-4xl font-bold w-[600px] text-center">Veja o que nosso clientes dizem sobre nosso trabalho</h2>
 
                 <Carousel
-                    opts={{ loop: true }}
-                    className="w-[1200px] h-fit"
+                    opts={{ loop: true, align: "center" }}
+                    className="w-[1400px] h-fit"
                 >
                     <CarouselContent className="flex items-center py-10">
                         {reviewsCardContent.map(({ comment, name, rating, urlImage }) => (
-                            <CarouselItem className="w-[400px] h-fit basis-[40%]" key={urlImage}>
+                            <CarouselItem className="w-[400px] h-fit basis-[30%]" key={urlImage}>
                                 <ReviewCard comment={comment} name={name} rating={rating} urlImage={urlImage} />
                             </CarouselItem>
 
@@ -99,6 +100,21 @@ export default function Home() {
 
             </section>
 
+            <section className="px-60 py-20 flex items-center justify-between">
+             
+                    <div className="w-[800px] flex flex-col h-full">
+                        <h2 className="text-4xl font-bold text-primaryColor mb-8">Perguntas Frequentes</h2>
+
+                        {
+                            faqContent.map(({ answer, question }) => (
+                                <FaqCard answer={answer} question={question} />
+                            ))
+                        }
+                    </div>
+
+                    <img className="w-[600px] h-auto" src={faqImage} />
+             
+            </section>
 
         </main>
     )

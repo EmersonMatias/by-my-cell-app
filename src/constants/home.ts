@@ -113,6 +113,29 @@ export const reviewsCardContent: ReviewCard[] = [
     }
 ]
 
+export const faqContent = [
+    {
+        question: "Como devemos enviar as amostras de solo?",
+        answer: "As amostras de solo (5 a 10g) podem ser enviadas em temperatura ambiente por correios a nossa sede em Ribeirão Preto – SP."
+    },
+    {
+        question: "Como enviamos as amostras para genômica e microbiota?",
+        answer: "Nosso orçamento automatizado contém informações específicas para cada tipo de amostra a ser analisada."
+    },
+    {
+        question: "Vocês realizam a extração de DNA?",
+        answer: "As análise de microbiota e identificação de microrganismos já incluem a extração de DNA. Para genômica, podemos realizar a extração de DNA por uma taxa adicional de 10% do valor do projeto."
+    },
+    {
+        question: "Podemos realizar o pagamento com verba FAPESP ou CNPq?",
+        answer: "Sim. Basta informar os dados de faturamento e número de processo para incluirmos na nota fiscal."
+    },
+    {
+        question: "Quais são as formas de pagamento das análises?",
+        answer: "Para projetos com valores maiores do que 10 salários mínimos, 50% é pago na contratação e 50% na entrega dos resultados (boleto com vencimento a 15 dias)."
+    },
+]
+
 
 type ReviewCard = {
     name: string,

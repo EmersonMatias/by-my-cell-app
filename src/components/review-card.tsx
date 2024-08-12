@@ -6,7 +6,7 @@ export default function ReviewCard({ comment, name, rating, urlImage }: ReviewCa
     const totalStars = 5
 
     return (
-        <Card className="w-[400px] h-fit shadow-[0_0px_30px_rgba(0,0,0,0.5)]">
+        <Card className="w-[400px] h-fit shadow-[0_0px_30px_rgba(0,0,0,1)]">
             <CardHeader className="flex">
                 <Avatar>
                     <AvatarImage src={urlImage} />
@@ -19,7 +19,7 @@ export default function ReviewCard({ comment, name, rating, urlImage }: ReviewCa
 
             <CardContent>{comment}</CardContent>
 
-            <CardFooter>
+            <CardFooter className="flex gap-2">
                 {[...Array(totalStars)].map((_, index) => (
                     <Star
                         key={`star-${index}-${rating}`}
