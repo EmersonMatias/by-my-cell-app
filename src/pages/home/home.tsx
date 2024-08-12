@@ -101,19 +101,17 @@ export default function Home() {
             </section>
 
             <section className="px-60 py-20 flex items-center justify-between">
-             
-                    <div className="w-[800px] flex flex-col h-full">
-                        <h2 className="text-4xl font-bold text-primaryColor mb-8">Perguntas Frequentes</h2>
+                <div className="w-[800px] flex flex-col h-full">
+                    <h2 className="text-4xl font-bold text-primaryColor mb-8">Perguntas Frequentes</h2>
 
-                        {
-                            faqContent.map(({ answer, question }) => (
-                                <FaqCard answer={answer} question={question} />
-                            ))
-                        }
-                    </div>
+                    {
+                        faqContent.map(({ answer, question }) => (
+                            <FaqCard answer={answer} question={question} />
+                        ))
+                    }
+                </div>
 
-                    <img className="w-[600px] h-auto" src={faqImage} />
-             
+                <img className="w-[600px] h-auto" src={faqImage} />
             </section>
 
         </main>
