@@ -35,3 +35,31 @@ export const ourSolutionsContent = [
         text: "Projetos especial de engenharia microbiana baseados em genômica e inteligência artificial."
     },
 ]
+
+export const cardImageContent: CardImage[] = [
+    {
+        imagePosition: "left",
+        urlImage: "https://nutricaodesafras.com.br/wp-content/uploads/2023/05/saude-do-solo.jpg",
+        title: "Plataforma genômica para Agricultura de Precisão",
+        text: "Nossa plataforma ByMySoil fornece serviço de análise de microrganismos presentes no solo visando detecção de potenciais causadores de doenças e direcionamento no uso de Bioinsumos",
+        buttonText: "Conheça nossa solução ByMySoil",
+    },
+
+    {
+        imagePosition: "right",
+        urlImage: "https://planejar.org.br/wp-content/uploads/2024/05/planejar_MAPA-BRASIL-3.jpg",
+        title: "Mais de 300 projetos realizados para empresas e ICTs",
+        text: "Nossa plataforma genômica vem sendo utilizada por empresas e grupos de pesquisano Brasil para acelerar a geração de resultados em genômica e biotecnologia.",
+        buttonText: "Solicite seu orçamento automático",
+    }
+]
+
+
+
+type CardImage = {
+    imagePosition: "left" | "right",
+    urlImage: string,
+    title: string,
+    text:string,
+    buttonText:string,
+}
