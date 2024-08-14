@@ -1,14 +1,19 @@
 import { Button } from "@/components/ui/button"
 import "./home.css"
-import { cardImageContent, faqContent, imagesUrl, ourSolutionsContent, reviewsCardContent } from "@/constants/home"
+import { cardImageContent, faqContent, imagesUrl } from "@/constants/home"
 import CardOurSolutions from "@/components/card-our-solutions/card-our-solutions"
 import CardImage from "@/components/card-image"
 import ReviewCard from "@/components/review-card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import faqImage from "../../assets/faqImage.svg"
 import FaqCard from "@/components/faq-card"
+import useGetReviews from "@/hooks/use-reviews"
+import useGetOurSolutions from "@/hooks/use-our-solutions"
 
 export default function Home() {
+    const { data: reviewsList } = useGetReviews()
+    const { data: ourSolutionsList } = useGetOurSolutions()
+
     return (
         <main className="w-full flex flex-col items-center"  >
 
@@ -25,7 +30,7 @@ export default function Home() {
                 <h2 className="text-5xl text-center font-semibold text-[#009953] mb-10">Nossas Soluções</h2>
 
                 <div className="flex justify-between flex-wrap gap-20">
-                    {ourSolutionsContent.map(({ name, number, text }) => (
+                    {ourSolutionsList?.map(({ name, number, text }) => (
                         <CardOurSolutions name={name} text={text} number={number} key={number} />
                     ))}
                 </div>
@@ -86,7 +91,7 @@ export default function Home() {
                     className="w-[1400px] h-fit"
                 >
                     <CarouselContent className="flex items-center py-10">
-                        {reviewsCardContent.map(({ comment, name, rating, urlImage }) => (
+                        {reviewsList?.map(({ comment, name, rating, urlImage }) => (
                             <CarouselItem className="w-[400px] h-fit basis-[30%]" key={urlImage}>
                                 <ReviewCard comment={comment} name={name} rating={rating} urlImage={urlImage} />
                             </CarouselItem>
