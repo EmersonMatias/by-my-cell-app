@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import "./home.css"
-import { cardImageContent, faqContent, imagesUrl } from "@/constants/home"
+import { cardImageContent } from "@/constants/home"
 import CardOurSolutions from "@/components/card-our-solutions/card-our-solutions"
 import CardImage from "@/components/card-image"
 import ReviewCard from "@/components/review-card"
@@ -9,10 +9,14 @@ import faqImage from "../../assets/faqImage.svg"
 import FaqCard from "@/components/faq-card"
 import useGetReviews from "@/hooks/use-reviews"
 import useGetOurSolutions from "@/hooks/use-our-solutions"
+import useGetResearchInstitutions from "@/hooks/use-research-institutions"
+import useGetFaq from "@/hooks/use-faq"
 
 export default function Home() {
     const { data: reviewsList } = useGetReviews()
     const { data: ourSolutionsList } = useGetOurSolutions()
+    const { data: researchInstitutionsList } = useGetResearchInstitutions()
+    const { data: faqList } = useGetFaq()
 
     return (
         <main className="w-full flex flex-col items-center"  >
@@ -40,9 +44,8 @@ export default function Home() {
                 <h4 className="text-2xl text-center font-semibold mb-10">Reconhecida pelas principais instituições de pesquisa</h4>
 
                 <div className="flex  px-60 justify-between">
-                    {imagesUrl.map((url) => (
-                        <img className="h-[40px] w-auto" src={url} key={url} />
-
+                    {researchInstitutionsList?.map(({ id, urlImage, altImage }) => (
+                        <img className="h-[40px] w-auto" src={urlImage} key={id} alt={altImage} />
                     ))}
                 </div>
             </section>
@@ -110,13 +113,13 @@ export default function Home() {
                     <h2 className="text-4xl font-bold text-primaryColor mb-8">Perguntas Frequentes</h2>
 
                     {
-                        faqContent.map(({ answer, question }) => (
-                            <FaqCard answer={answer} question={question} />
+                        faqList?.map(({ answer, question, id }) => (
+                            <FaqCard answer={answer} question={question} key={id} />
                         ))
                     }
                 </div>
 
-                <img className="w-[600px] h-auto" src={faqImage} />
+                <img className="w-[600px] h-auto" src={faqImage} alt="Imagem de Microscópio e DNA" />
             </section>
 
         </main>
