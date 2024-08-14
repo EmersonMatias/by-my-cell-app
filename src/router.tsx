@@ -1,7 +1,7 @@
-import Home from "@/pages/home/home"
+import Home from "@/pages/home"
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom"
-import About from "./pages/team/team"
-import Contact from "./pages/contact/contact"
+import About from "./pages/team"
+import Contact from "./pages/contact"
 import Layout from "./components/layout"
 
 const router = createBrowserRouter(

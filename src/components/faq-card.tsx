@@ -1,7 +1,7 @@
 import { Separator } from "./ui/separator"
 
 
-export default function FaqCard({answer,question}: FaqCardProps) {
+export default function FaqCard({ answer, question }: FaqCardProps) {
     return (
         <div>
             <h4 className="text-xl font-medium">{question}</h4>

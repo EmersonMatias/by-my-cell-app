@@ -18,11 +18,11 @@ export default function Footer() {
                 </div>
 
                 <div className="flex gap-8">
-                    <NavLink to=""><img className="w-10 h-10" src={instagram} /></NavLink>
+                    <NavLink to=""><img alt="Icone do Instagram"  className="w-10 h-10" src={instagram} /></NavLink>
 
-                    <NavLink to=""><img className="w-10 h-10" src={whatsapp} /></NavLink>
+                    <NavLink to=""><img alt="Icone do Whatsapp"  className="w-10 h-10" src={whatsapp} /></NavLink>
 
-                    <NavLink to=""><img className="w-10 h-10" src={linkedin} /></NavLink>
+                    <NavLink to=""><img alt="Icone do Linkedin" className="w-10 h-10" src={linkedin} /></NavLink>
                 </div>
             </div>
 

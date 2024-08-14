@@ -7,7 +7,7 @@ export default function About() {
     return (
         <main className="pt-24">
 
-            <section className="flex items-center justify-center gap-10 py-10 px-60">
+            <section className="flex items-center justify-center gap-10 py-20 px-60">
                 <div className="w-[600px]">
                     <h2 className="text-5xl font-semibold text-primaryColor mb-2">Sobre Nós</h2>
                     <p className="text-lg mb-5">Uma equipe jovem que, desde 2022, vem buscando impactar de forma significativa o desenvolvimento da Biotecnologia no Brasil. De Ribeirão Preto, para o Brasil e o Mundo.</p>
@@ -62,9 +62,9 @@ export default function About() {
             </section>
 
             <section className="py-20 px-60 ourTeam">
-                <h2 className="text-5xl text-primaryColor font-semibold text-center mb-10">Conheça nosso time</h2>
+                <h2 className="text-5xl text-primaryColor font-semibold text-center mb-16">Conheça nosso time de liderança</h2>
 
-              <div className="flex flex-wrap justify-center gap-x-20 gap-y-10">
+              <div className="flex flex-wrap justify-center gap-x-20 gap-y-12">
                 {ourTeamContent.map(({name,position,urlImage}) => (
                     <TeamCard name={name} position={position} urlImage={urlImage} key={name}/>
                 ))}
